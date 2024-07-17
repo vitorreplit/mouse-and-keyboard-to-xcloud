@@ -1,0 +1,64 @@
+<script>
+  // Define the keys that will be used for the controller
+  const keys = {
+    up: 'ArrowUp',
+    down: 'ArrowDown',
+    left: 'ArrowLeft',
+    right: 'ArrowRight',
+    a: 'KeyA',
+    b: 'KeyB',
+    x: 'KeyX',
+    y: 'KeyY',
+    start: 'Enter',
+    select: 'Escape',
+  };
+
+  // Create a dictionary to store the current state of the keys
+  const keyState = {};
+
+  // Add event listeners to the keys
+  window.addEventListener('keydown', (event) => {
+    keyState[event.code] = true;
+  });
+
+  window.addEventListener('keyup', (event) => {
+    keyState[event.code] = false;
+  });
+
+  // Function to check if a key is pressed
+  function isKeyPressed(key) {
+    return keyState[keys[key]];
+  }
+
+  // Example usage
+  function updateGame() {
+    if (isKeyPressed('up')) {
+      // Move up
+    }
+
+    if (isKeyPressed('down')) {
+      // Move down
+    }
+
+    if (isKeyPressed('left')) {
+      // Move left
+    }
+
+    if (isKeyPressed('right')) {
+      // Move right
+    }
+
+    if (isKeyPressed('a')) {
+      // Perform action A
+    }
+
+    if (isKeyPressed('b')) {
+      // Perform action B
+    }
+
+    // ...
+  }
+
+  // Call the updateGame function regularly
+  setInterval(updateGame, 16); // Update 60 times per second
+</script>
